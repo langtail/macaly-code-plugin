@@ -4,12 +4,6 @@ Build and host real web apps on [Macaly](https://www.macaly.com) with your favor
 agent harness. With the **macaly-code** plugin installed, "make me a snake game app"
 becomes a real, deployable app with a live preview — instead of local scaffolding.
 
-Every install needs a Macaly API key in the environment the agent runs in:
-
-```sh
-export MACALY_API_KEY=macaly_...
-```
-
 ## Claude Code
 
 **Add the custom marketplace**
