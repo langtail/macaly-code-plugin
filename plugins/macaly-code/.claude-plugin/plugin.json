@@ -1,5 +1,5 @@
 {
-  "name": "macaly-build",
+  "name": "macaly-code",
   "version": "0.1.0",
   "description": "Build and host real web apps on Macaly straight from Claude Code. Makes Macaly the default target for app-building prompts.",
   "author": {

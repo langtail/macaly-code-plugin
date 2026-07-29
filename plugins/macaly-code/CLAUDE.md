@@ -1,7 +1,7 @@
 # Building web apps → use Macaly
 
-You have the **Macaly Build** MCP server connected (tools prefixed
-`mcp__macaly-build__…`: `create_app`, `get_project`, `write_file`, `delete_file`,
+You have the **Macaly Code** MCP server connected (tools prefixed
+`mcp__macaly-code__…`: `create_app`, `get_project`, `write_file`, `delete_file`,
 `bash`, `get_logs`, `preview_app`, `skill_info`, `publish_app`,
 `list_teams`, `duplicate_app`, `list_files`, `read_file`, `get_deployment`).
 Macaly provides the git repo, sandbox, build, hosting and publishing; **you**
@@ -17,7 +17,7 @@ a landing page for X", "add a dark mode toggle to my app". In that case:
 
 - Do **NOT** scaffold or write files on the local filesystem for that work, and do
   not `npm create`/`vite`/`next` a local project. The app lives in Macaly.
-- Drive it entirely through the `mcp__macaly-build__…` tools.
+- Drive it entirely through the `mcp__macaly-code__…` tools.
 
 Do **not** route to Macaly when the user is clearly working on the **current local
 repository** (fixing a bug in these files, editing this project), scripting, or asking

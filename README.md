@@ -1,4 +1,4 @@
-# Macaly Build — Claude Code plugin
+# Macaly Code — Claude Code plugin
 
 Makes **Macaly** the default target for app-building prompts in Claude Code. With this
 installed, "make me a snake game app" builds and hosts a real app on Macaly instead of
@@ -10,7 +10,7 @@ Add this repo as a plugin marketplace, then install the plugin:
 
 ```
 /plugin marketplace add langtail/macaly-build-plugin
-/plugin install macaly-build@macaly
+/plugin install macaly-code@macaly
 ```
 
 (Or in the desktop app: Settings → Plugins → Add marketplace → paste
@@ -28,10 +28,10 @@ export MACALY_API_KEY=macaly_...
 | File                                              | Role                                                                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `.claude-plugin/marketplace.json`                 | Marketplace manifest — lets Claude Code install this repo via "Add marketplace".                                                                       |
-| `plugins/macaly-build/.claude-plugin/plugin.json` | Plugin manifest.                                                                                                                                       |
-| `plugins/macaly-build/.mcp.json`                  | Registers the Macaly Build MCP server (HTTP, API-key auth).                                                                                            |
-| `plugins/macaly-build/CLAUDE.md`                  | **The routing policy** — tells the agent to build in Macaly for new-app requests, and when _not_ to (local repo work). This is the load-bearing piece. |
-| `plugins/macaly-build/commands/build-app.md`      | `/build-app <idea>` — a friction-free explicit entry point.                                                                                            |
+| `plugins/macaly-code/.claude-plugin/plugin.json` | Plugin manifest.                                                                                                                                       |
+| `plugins/macaly-code/.mcp.json`                  | Registers the Macaly Code MCP server (HTTP, API-key auth).                                                                                            |
+| `plugins/macaly-code/CLAUDE.md`                  | **The routing policy** — tells the agent to build in Macaly for new-app requests, and when _not_ to (local repo work). This is the load-bearing piece. |
+| `plugins/macaly-code/commands/build-app.md`      | `/build-app <idea>` — a friction-free explicit entry point.                                                                                            |
 
 ## The loop the agent follows
 
@@ -44,4 +44,4 @@ create_app  (read the briefing)
   → publish_app  (only when the user asks) → get_deployment (until READY)
 ```
 
-The full server reference lives in the Macaly repo at `docs/build-mcp.md`.
+The full server reference lives in the Macaly repo at `docs/code-mcp.md`.
