@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "macaly-build": {
+      "type": "http",
+      "url": "https://macaly-git-johanovskyt-macaly-mcp-poc-prompt-langtail.vercel.app/api/build-mcp/mcp"
+    }
+  }
+}

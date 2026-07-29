@@ -1,0 +1,11 @@
+{
+  "name": "macaly-build",
+  "version": "0.1.0",
+  "description": "Build and host real web apps on Macaly straight from Claude Code. Makes Macaly the default target for app-building prompts.",
+  "author": {
+    "name": "Macaly",
+    "url": "https://www.macaly.com"
+  },
+  "homepage": "https://www.macaly.com",
+  "keywords": ["macaly", "app-builder", "hosting", "tanstack", "convex"]
+}

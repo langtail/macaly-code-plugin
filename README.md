@@ -1,0 +1,28 @@
+# Macaly Build — Claude Code plugin
+
+Makes **Macaly** the default target for app-building prompts in Claude Code. With this
+installed, "make me a snake game app" builds and hosts a real app on Macaly instead of
+scaffolding local files.
+
+## What's in here
+
+| File                         | Role                                                                                                                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.claude-plugin/plugin.json` | Plugin manifest.                                                                                                                                       |
+| `.mcp.json`                  | Registers the Macaly Build MCP server (HTTP, API-key auth).                                                                                            |
+| `CLAUDE.md`                  | **The routing policy** — tells the agent to build in Macaly for new-app requests, and when _not_ to (local repo work). This is the load-bearing piece. |
+| `commands/build-app.md`      | `/build-app <idea>` — a friction-free explicit entry point.                                                                                            |
+
+
+
+## The loop the agent follows
+
+```
+create_app  (read the briefing)
+  → write_file × N  (each commits; the preview rebuilds after your last write)
+  → bash ".sandbox/check-errors"  → get_logs on failure
+  → skill_info, then bash to run the guide  (database/auth/payments/media, e.g. setup-convex-db)
+  → publish_app  (only when the user asks) → get_deployment (until READY)
+```
+
+The full server reference lives in the Macaly repo at `docs/build-mcp.md`.
