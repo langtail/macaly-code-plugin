@@ -40,6 +40,7 @@ create_app  (read the briefing)
   → write_file × N  (each commits; the preview rebuilds after your last write)
   → bash ".sandbox/check-errors"  → get_logs on failure
   → skill_info, then bash to run the guide  (database/auth/payments/media, e.g. setup-convex-db)
+  → preview_app  (preview URL; renders the app inline in clients that support MCP Apps)
   → publish_app  (only when the user asks) → get_deployment (until READY)
 ```
 

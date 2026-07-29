@@ -17,8 +17,9 @@ the local filesystem for this. Steps:
    scripts live.
 3. Typecheck after your last write — `bash` with command `.sandbox/check-errors`
    (timeoutSeconds: 120) — and fix anything it reports (use `get_logs` for detail).
-4. Report the preview URL from `get_project`. Do **not** `publish_app` unless the user
-   asks to go live.
+4. Show the result with `preview_app` and report its preview URL (in clients that
+   support MCP Apps it also renders the running app inline). Do **not** `publish_app`
+   unless the user asks to go live.
 
 Keep it scoped to what was asked — a clean, working first version, not a speculative
 platform.

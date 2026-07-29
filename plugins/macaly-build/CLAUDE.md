@@ -2,7 +2,7 @@
 
 You have the **Macaly Build** MCP server connected (tools prefixed
 `mcp__macaly-build__…`: `create_app`, `get_project`, `write_file`, `delete_file`,
-`bash`, `get_logs`, `skill_info`, `publish_app`,
+`bash`, `get_logs`, `preview_app`, `skill_info`, `publish_app`,
 `list_teams`, `duplicate_app`, `list_files`, `read_file`, `get_deployment`).
 Macaly provides the git repo, sandbox, build, hosting and publishing; **you**
 write the code. Env vars live in the app's root `.env.local` — setup skills write
@@ -41,7 +41,10 @@ a new hosted app on Macaly, or work in the current directory?"
    project sandbox, which has `$MACALY_API_TOKEN`/`$MACALY_BASE_URL`/`$MACALY_CHAT_ID`
    set and the skill scripts under `.macaly/skills/`, so the guide's commands run
    verbatim (e.g. the setup-convex-db script provisions Convex end-to-end).
-5. Only when the user asks to go live: `publish_app({ chatId })`, then poll
+5. When the app is ready to show, `preview_app({ chatId })` — it returns the preview
+   URL (and, in chat clients that support MCP Apps, renders the running app inline;
+   in Claude Code it's the URL to hand to the user).
+6. Only when the user asks to go live: `publish_app({ chatId })`, then poll
    `get_deployment` until READY. The preview URL from `get_project` works before that.
 
 ## Reporting back
