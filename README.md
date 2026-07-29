@@ -1,47 +1,63 @@
-# Macaly Code — Claude Code plugin
+# Macaly agent plugins
 
-Makes **Macaly** the default target for app-building prompts in Claude Code. With this
-installed, "make me a snake game app" builds and hosts a real app on Macaly instead of
-scaffolding local files.
+Build and host real web apps on [Macaly](https://www.macaly.com) with your favorite
+agent harness. With the **macaly-code** plugin installed, "make me a snake game app"
+becomes a real, deployable app with a live preview — instead of local scaffolding.
 
-## Install
+Every install needs a Macaly API key in the environment the agent runs in:
 
-Add this repo as a plugin marketplace, then install the plugin:
-
-```
-/plugin marketplace add langtail/macaly-build-plugin
-/plugin install macaly-code@macaly
-```
-
-(Or in the desktop app: Settings → Plugins → Add marketplace → paste
-`https://github.com/langtail/macaly-build-plugin`.)
-
-The MCP connection authenticates with a Macaly API key — export it before starting
-Claude Code:
-
-```bash
+```sh
 export MACALY_API_KEY=macaly_...
 ```
 
-## What's in here
+## Claude Code
 
-| File                                              | Role                                                                                                                                                   |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `.claude-plugin/marketplace.json`                 | Marketplace manifest — lets Claude Code install this repo via "Add marketplace".                                                                       |
-| `plugins/macaly-code/.claude-plugin/plugin.json` | Plugin manifest.                                                                                                                                       |
-| `plugins/macaly-code/.mcp.json`                  | Registers the Macaly Code MCP server (HTTP, API-key auth).                                                                                            |
-| `plugins/macaly-code/CLAUDE.md`                  | **The routing policy** — tells the agent to build in Macaly for new-app requests, and when _not_ to (local repo work). This is the load-bearing piece. |
-| `plugins/macaly-code/commands/build-app.md`      | `/build-app <idea>` — a friction-free explicit entry point.                                                                                            |
+**Add the custom marketplace**
 
-## The loop the agent follows
-
-```
-create_app  (read the briefing)
-  → write_file × N  (each commits; the preview rebuilds after your last write)
-  → bash ".sandbox/check-errors"  → get_logs on failure
-  → skill_info, then bash to run the guide  (database/auth/payments/media, e.g. setup-convex-db)
-  → preview_app  (preview URL; renders the app inline in clients that support MCP Apps)
-  → publish_app  (only when the user asks) → get_deployment (until READY)
+```sh
+/plugin marketplace add langtail/macaly-code-plugin
 ```
 
-The full server reference lives in the Macaly repo at `docs/code-mcp.md`.
+**Install the plugin**
+
+```sh
+/plugin install macaly-code@macaly
+```
+
+## Codex
+
+**Add the custom marketplace**
+
+```sh
+codex plugin marketplace add langtail/macaly-code-plugin
+```
+
+**Install the plugin**
+
+```sh
+codex plugin install macaly-code@macaly
+```
+
+You can also browse and install plugins interactively by running `/plugins` inside
+Codex CLI after adding the marketplace.
+
+## Cursor
+
+Once the plugin is listed on the Cursor marketplace:
+
+```sh
+/add-plugin macaly-code
+```
+
+The `.cursor-plugin/` manifests in this repo are marketplace-ready.
+
+## What the plugin ships
+
+| Piece                              | Role                                                           |
+| ---------------------------------- | --------------------------------------------------------------- |
+| `mcp.json`                         | The Macaly Code MCP connection (HTTP, API-key auth).            |
+| `skills/build-app-on-macaly`       | The full build loop the agent follows.                          |
+| `rules/route-app-builds-to-macaly` | Routes new-app prompts to Macaly, keeps local-repo work local.  |
+| `commands/build-app`               | `/build-app <idea>` — a friction-free explicit entry point.     |
+
+The server reference lives in the Macaly repo at `docs/code-mcp.md`.

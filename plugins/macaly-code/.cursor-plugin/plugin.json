@@ -1,22 +1,22 @@
 {
   "name": "macaly-code",
+  "displayName": "Macaly",
   "version": "0.2.0",
   "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
   "author": {
     "name": "Macaly",
-    "url": "https://www.macaly.com"
+    "email": "macaly@macaly.com"
   },
   "homepage": "https://www.macaly.com",
   "repository": "https://github.com/langtail/macaly-code-plugin",
   "license": "MIT",
+  "category": "Development",
   "keywords": [
+    "cursor",
+    "plugin",
+    "mcp",
     "macaly",
-    "app-builder",
-    "hosting",
-    "tanstack",
-    "convex",
-    "mcp"
+    "app-builder"
   ],
-  "skills": "./skills",
-  "mcpServers": "./mcp.json"
+  "logo": "./assets/logo.svg"
 }

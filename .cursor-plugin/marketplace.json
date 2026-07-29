@@ -2,7 +2,7 @@
   "name": "macaly",
   "owner": {
     "name": "Macaly",
-    "url": "https://www.macaly.com"
+    "email": "macaly@macaly.com"
   },
   "metadata": {
     "description": "Macaly plugins for coding agents — build and host real web apps on Macaly.",

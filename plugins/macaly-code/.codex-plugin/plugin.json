@@ -1,0 +1,42 @@
+{
+  "name": "macaly-code",
+  "version": "0.2.0",
+  "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
+  "author": {
+    "name": "Macaly",
+    "url": "https://www.macaly.com"
+  },
+  "homepage": "https://www.macaly.com",
+  "repository": "https://github.com/langtail/macaly-code-plugin.git",
+  "license": "MIT",
+  "keywords": [
+    "macaly",
+    "app-builder",
+    "hosting",
+    "tanstack",
+    "convex",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "interface": {
+    "displayName": "Macaly Code",
+    "shortDescription": "Build and host real web apps on Macaly.",
+    "longDescription": "Macaly provides the full app infrastructure — git repo, cloud sandbox, build pipeline, hosting and one-click publish — while your agent writes the code. With this plugin, app-building prompts turn into real, deployable TanStack Start + Convex apps with a live preview, instead of local scaffolding.",
+    "developerName": "Macaly",
+    "category": "Development",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.macaly.com",
+    "brandColor": "#000000",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "defaultPrompt": [
+      "Make me a snake game app",
+      "Build a landing page for my coffee shop",
+      "Add a dark mode toggle to my Macaly app"
+    ]
+  }
+}
