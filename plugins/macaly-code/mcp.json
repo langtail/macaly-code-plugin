@@ -2,7 +2,7 @@
   "mcpServers": {
     "macaly-code": {
       "type": "http",
-      "url": "https://macaly-git-johanovskyt-macaly-mcp-poc-prompt-langtail.vercel.app/api/code-mcp/mcp"
+      "url": "https://www.macaly.com/api/code-mcp/mcp"
     }
   }
 }
