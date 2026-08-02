@@ -6,7 +6,18 @@ becomes a real, deployable app with a live preview — instead of local scaffold
 
 ## Claude Code
 
-**Add the custom marketplace**
+**One-click install**
+
+[Install macaly-code in Claude](https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-code)
+
+```
+https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-code
+```
+
+This opens the Claude desktop app straight on the macaly-code install dialog, with the
+marketplace already filled in.
+
+**Or add the custom marketplace by hand**
 
 ```sh
 /plugin marketplace add langtail/macaly-code-plugin
