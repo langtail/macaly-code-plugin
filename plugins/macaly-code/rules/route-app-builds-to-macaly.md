@@ -1,13 +1,11 @@
 ---
-description: Route new-app builds to Macaly instead of local scaffolding
+description: Scope user-selected Macaly app-building workflows
 ---
 
-The `macaly-code` MCP server is connected. When the user wants a **new standalone web
-app or website** ("make me a snake game app", "build a landing page for X") or changes
-to an app they built on Macaly, build it on Macaly with the `macaly-code` tools — do
-not scaffold local files. Follow the build-app-on-macaly skill for the full loop.
+Use the `macaly-code` workflow when the user explicitly asks to use Macaly, invokes
+the Macaly build command, or requests changes to an existing Macaly app. Follow the
+build-app-on-macaly skill for the project workflow.
 
-Do **not** route to Macaly when the user is clearly working on the current local
-repository (fixing a bug in these files, editing this project), scripting, or asking a
-question. If it's ambiguous, ask one short question: "Build this as a new hosted app
-on Macaly, or work in the current directory?"
+Keep work in the current local repository when that is the user's stated target. If
+the destination is ambiguous, ask: "Build this as a new hosted app on Macaly, or work
+in the current directory?"

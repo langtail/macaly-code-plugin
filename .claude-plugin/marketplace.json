@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Macaly plugins for coding agents — build and host real web apps on Macaly.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "macaly-code",
       "source": "./plugins/macaly-code",
-      "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts."
+      "description": "Build, validate, preview, and host web apps in a managed Macaly project."
     }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "macaly-code": {
+      "type": "http",
+      "url": "https://www.macaly.com/api/code-mcp/chatgpt/mcp"
+    }
+  }
+}

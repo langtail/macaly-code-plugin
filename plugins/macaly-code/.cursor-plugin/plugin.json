@@ -1,7 +1,7 @@
 {
   "name": "macaly-code",
   "displayName": "Macaly",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
   "author": {
     "name": "Macaly",
@@ -18,5 +18,7 @@
     "macaly",
     "app-builder"
   ],
+  "skills": "./skills-codex/",
+  "mcpServers": "./.mcp.universal.json",
   "logo": "./assets/logo.svg"
 }
