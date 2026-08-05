@@ -4,6 +4,7 @@
   "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
   "author": {
     "name": "Macaly",
+    "email": "support@macaly.com",
     "url": "https://www.macaly.com"
   },
   "homepage": "https://www.macaly.com",
@@ -18,18 +19,21 @@
     "mcp"
   ],
   "skills": "./skills/",
-  "mcpServers": "./mcp.json",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Macaly Code",
-    "shortDescription": "Build and host real web apps on Macaly.",
+    "shortDescription": "Build and host apps on Macaly",
     "longDescription": "Macaly provides the full app infrastructure — git repo, cloud sandbox, build pipeline, hosting and one-click publish — while your agent writes the code. With this plugin, app-building prompts turn into real, deployable TanStack Start + Convex apps with a live preview, instead of local scaffolding.",
     "developerName": "Macaly",
-    "category": "Development",
+    "category": "Developer Tools",
     "capabilities": [
       "Read",
       "Write"
     ],
     "websiteURL": "https://www.macaly.com",
+    "supportURL": "https://www.macaly.com/docs/en/welcome/overview",
+    "privacyPolicyURL": "https://www.macaly.com/privacy-policy",
+    "termsOfServiceURL": "https://www.macaly.com/terms-of-service",
     "brandColor": "#000000",
     "composerIcon": "./assets/logo.svg",
     "logo": "./assets/logo.svg",

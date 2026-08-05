@@ -40,8 +40,17 @@ codex plugin marketplace add langtail/macaly-code-plugin
 **Install the plugin**
 
 ```sh
-codex plugin install macaly-code@macaly
+codex plugin add macaly-code@macaly
 ```
+
+**Authenticate with Macaly**
+
+```sh
+codex mcp login macaly-code
+```
+
+Complete the OAuth flow in your browser. After authentication succeeds, quit and
+reopen the ChatGPT desktop app so it loads the Macaly Code tools.
 
 You can also browse and install plugins interactively by running `/plugins` inside
 Codex CLI after adding the marketplace.
@@ -60,9 +69,13 @@ The `.cursor-plugin/` manifests in this repo are marketplace-ready.
 
 | Piece                              | Role                                                           |
 | ---------------------------------- | --------------------------------------------------------------- |
-| `mcp.json`                         | The Macaly Code MCP connection (HTTP, API-key auth).            |
+| `.mcp.json`                        | The Macaly Code MCP connection (HTTP, OAuth).                   |
 | `skills/build-app-on-macaly`       | The full build loop the agent follows.                          |
 | `rules/route-app-builds-to-macaly` | Routes new-app prompts to Macaly, keeps local-repo work local.  |
 | `commands/build-app`               | `/build-app <idea>` — a friction-free explicit entry point.     |
 
 The server reference lives in the Macaly repo at `docs/code-mcp.md`.
+
+For the OpenAI Plugins Directory listing, reviewer tests, tool-annotation
+justifications, and remaining portal steps, see
+[`docs/openai-submission.md`](docs/openai-submission.md).

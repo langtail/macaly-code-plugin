@@ -9,6 +9,6 @@ and the agent writes the code through the `macaly-code` MCP server.
 - `rules/route-app-builds-to-macaly` — routes new-app prompts to Macaly instead of
   local scaffolding.
 - `commands/build-app` — `/build-app <idea>` explicit entry point.
-- `mcp.json` — the MCP connection (HTTP, `Authorization: Bearer ${MACALY_API_KEY}`).
+- `.mcp.json` — the MCP connection (HTTP with OAuth authentication).
 
 See the [repository README](../../README.md) for per-provider install instructions.
