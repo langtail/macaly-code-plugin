@@ -69,8 +69,9 @@ The `.cursor-plugin/` manifests in this repo are marketplace-ready.
 
 | Piece                               | Role                                                               |
 | ----------------------------------- | ------------------------------------------------------------------ |
-| `.mcp.json`                         | Universal Macaly Code MCP connection (HTTP, OAuth).                |
+| `.mcp.chatgpt.json`                 | ChatGPT/Codex directory profile without embedded preview UI.       |
 | `.mcp.claude.json`                  | Claude directory profile with review-scoped descriptors.           |
+| `.mcp.universal.json`               | Universal MCP connection for direct and Cursor installations.      |
 | `skills-claude/build-app-on-macaly` | Claude-specific workflow scoped to user-selected Macaly work.      |
 | `skills-codex/build-app-on-macaly`  | The Codex workflow with the full hosted-app build loop.            |
 | `rules/route-app-builds-to-macaly`  | Scopes explicitly selected Macaly work and keeps local work local. |

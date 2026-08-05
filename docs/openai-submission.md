@@ -6,6 +6,10 @@ Submit Macaly Code as **With MCP** using the ChatGPT production endpoint:
 https://www.macaly.com/api/code-mcp/chatgpt/mcp
 ```
 
+The packaged OpenAI plugin points to this endpoint through
+`plugins/macaly-code/.mcp.chatgpt.json`. The universal endpoint remains available
+separately for direct integrations.
+
 ## Listing
 
 - Name: `Macaly Code`

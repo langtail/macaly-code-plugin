@@ -9,6 +9,8 @@ and the agent writes the code through the `macaly-code` MCP server.
 - `rules/route-app-builds-to-macaly` — routes new-app prompts to Macaly instead of
   local scaffolding.
 - `commands/build-app` — `/build-app <idea>` explicit entry point.
-- `.mcp.json` — the MCP connection (HTTP with OAuth authentication).
+- `.mcp.chatgpt.json` — the ChatGPT/Codex directory profile.
+- `.mcp.claude.json` — the Claude directory profile.
+- `.mcp.universal.json` — the unrestricted direct/other-client connection.
 
 See the [repository README](../../README.md) for per-provider install instructions.

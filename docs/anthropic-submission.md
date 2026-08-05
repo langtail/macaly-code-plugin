@@ -8,6 +8,8 @@ https://www.macaly.com/api/code-mcp/claude/mcp
 
 The related Claude plugin uses the same endpoint through `.mcp.claude.json` and
 loads the Claude-specific `skills-claude/build-app-on-macaly` workflow.
+The package does not include a default `.mcp.json`, so Claude cannot also
+auto-discover the universal endpoint.
 
 ## Why this endpoint is separate
 
@@ -41,14 +43,14 @@ loads the Claude-specific `skills-claude/build-app-on-macaly` workflow.
 
 | Tools                                                                                                             | Permission hint         | Behavior                                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `list_teams`, `get_project`, `list_files`, `read_file`, `get_logs`, `preview_app`, `skill_info`, `get_deployment` | `readOnlyHint: true`    | Retrieve account, project, source, diagnostic, preview, guide, or deployment information without changing project data.  |
-| `create_app`, `duplicate_app`, `write_file`, `delete_file`                                                        | `destructiveHint: true` | Create or change private Macaly project state and therefore require confirmation in Claude.                              |
+| `list_teams`, `get_project`, `list_files`, `read_file`, `preview_app`, `skill_info`, `get_deployment` | `readOnlyHint: true`    | Retrieve account, project, source, preview, guide, or deployment information without changing project data.  |
+| `create_app`, `duplicate_app`, `write_file`, `delete_file`, `get_logs`                               | `destructiveHint: true` | Create or change private Macaly infrastructure or project state and therefore require confirmation in Claude. |
 | `run_project_command`                                                                                             | `destructiveHint: true` | Runs a full shell in the selected project's isolated cloud sandbox; it can change project data and reach external hosts. |
 | `publish_app`                                                                                                     | `destructiveHint: true` | Creates a publicly reachable production deployment after an explicit user request.                                       |
 
 `get_logs` may initialize the selected project's ephemeral sandbox for development
-logs, but it does not change project data; the Claude permission model therefore
-treats it as a read operation.
+logs. It does not change project files, but the Claude profile conservatively treats
+that infrastructure side effect as a state-changing operation.
 
 ## Review preparation
 

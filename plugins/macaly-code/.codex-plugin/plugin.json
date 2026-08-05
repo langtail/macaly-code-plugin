@@ -12,7 +12,7 @@
   "license": "MIT",
   "keywords": ["macaly", "app-builder", "hosting", "tanstack", "convex", "mcp"],
   "skills": "./skills-codex/",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.mcp.chatgpt.json",
   "interface": {
     "displayName": "Macaly Code",
     "shortDescription": "Build and host apps on Macaly",

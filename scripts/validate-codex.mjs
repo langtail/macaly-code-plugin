@@ -203,12 +203,6 @@ function validatePluginManifest(pluginDir, marketplaceName) {
       );
       continue;
     }
-    if (field === "mcpServers" && value !== "./.mcp.json") {
-      fail(
-        `${label}: \`mcpServers\` must reference "./.mcp.json" — got "${value}"`
-      );
-      continue;
-    }
     const resolved = resolve(pluginDir, value.slice(2));
     if (!existsSync(resolved)) {
       fail(`${label}: \`${field}\` references missing path "${value}"`);

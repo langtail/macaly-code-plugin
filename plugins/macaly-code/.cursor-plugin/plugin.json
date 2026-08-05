@@ -18,5 +18,7 @@
     "macaly",
     "app-builder"
   ],
+  "skills": "./skills-codex/",
+  "mcpServers": "./.mcp.universal.json",
   "logo": "./assets/logo.svg"
 }
