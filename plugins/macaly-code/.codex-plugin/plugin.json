@@ -10,14 +10,7 @@
   "homepage": "https://www.macaly.com",
   "repository": "https://github.com/langtail/macaly-code-plugin.git",
   "license": "MIT",
-  "keywords": [
-    "macaly",
-    "app-builder",
-    "hosting",
-    "tanstack",
-    "convex",
-    "mcp"
-  ],
+  "keywords": ["macaly", "app-builder", "hosting", "tanstack", "convex", "mcp"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
@@ -26,10 +19,7 @@
     "longDescription": "Macaly provides the full app infrastructure — git repo, cloud sandbox, build pipeline, hosting and one-click publish — while your agent writes the code. With this plugin, app-building prompts turn into real, deployable TanStack Start + Convex apps with a live preview, instead of local scaffolding.",
     "developerName": "Macaly",
     "category": "Developer Tools",
-    "capabilities": [
-      "Read",
-      "Write"
-    ],
+    "capabilities": ["Read", "Write"],
     "websiteURL": "https://www.macaly.com",
     "supportURL": "https://www.macaly.com/docs/en/welcome/overview",
     "privacyPolicyURL": "https://www.macaly.com/privacy-policy",
@@ -38,7 +28,7 @@
     "composerIcon": "./assets/logo.svg",
     "logo": "./assets/logo.svg",
     "defaultPrompt": [
-      "Make me a snake game app",
+      "Build a customer feedback dashboard",
       "Build a landing page for my coffee shop",
       "Add a dark mode toggle to my Macaly app"
     ]

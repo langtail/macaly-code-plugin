@@ -1,7 +1,7 @@
 # Macaly agent plugins
 
 Build and host real web apps on [Macaly](https://www.macaly.com) with your favorite
-agent harness. With the **macaly-code** plugin installed, "make me a snake game app"
+agent harness. With the **macaly-code** plugin installed, "build a customer feedback dashboard"
 becomes a real, deployable app with a live preview — instead of local scaffolding.
 
 ## Claude Code
@@ -67,15 +67,20 @@ The `.cursor-plugin/` manifests in this repo are marketplace-ready.
 
 ## What the plugin ships
 
-| Piece                              | Role                                                           |
-| ---------------------------------- | --------------------------------------------------------------- |
-| `.mcp.json`                        | The Macaly Code MCP connection (HTTP, OAuth).                   |
-| `skills/build-app-on-macaly`       | The full build loop the agent follows.                          |
-| `rules/route-app-builds-to-macaly` | Routes new-app prompts to Macaly, keeps local-repo work local.  |
-| `commands/build-app`               | `/build-app <idea>` — a friction-free explicit entry point.     |
+| Piece                               | Role                                                               |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| `.mcp.json`                         | Universal Macaly Code MCP connection (HTTP, OAuth).                |
+| `.mcp.claude.json`                  | Claude directory profile with review-scoped descriptors.           |
+| `skills-claude/build-app-on-macaly` | Claude-specific workflow scoped to user-selected Macaly work.      |
+| `skills/build-app-on-macaly`        | The full build loop the agent follows.                             |
+| `rules/route-app-builds-to-macaly`  | Scopes explicitly selected Macaly work and keeps local work local. |
+| `commands/build-app`                | `/build-app <idea>` — a friction-free explicit entry point.        |
 
 The server reference lives in the Macaly repo at `docs/code-mcp.md`.
 
 For the OpenAI Plugins Directory listing, reviewer tests, tool-annotation
 justifications, and remaining portal steps, see
 [`docs/openai-submission.md`](docs/openai-submission.md).
+
+For the Anthropic Connectors and Plugins directories, use the dedicated endpoint and
+checklist in [`docs/anthropic-submission.md`](docs/anthropic-submission.md).

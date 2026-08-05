@@ -12,7 +12,7 @@
     {
       "name": "macaly-code",
       "source": "./plugins/macaly-code",
-      "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts."
+      "description": "Build, validate, preview, and host web apps in a managed Macaly project."
     }
   ]
 }
