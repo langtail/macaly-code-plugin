@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Macaly plugins for coding agents — build and host real web apps on Macaly.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {

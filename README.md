@@ -72,7 +72,7 @@ The `.cursor-plugin/` manifests in this repo are marketplace-ready.
 | `.mcp.json`                         | Universal Macaly Code MCP connection (HTTP, OAuth).                |
 | `.mcp.claude.json`                  | Claude directory profile with review-scoped descriptors.           |
 | `skills-claude/build-app-on-macaly` | Claude-specific workflow scoped to user-selected Macaly work.      |
-| `skills/build-app-on-macaly`        | The full build loop the agent follows.                             |
+| `skills-codex/build-app-on-macaly`  | The Codex workflow with the full hosted-app build loop.            |
 | `rules/route-app-builds-to-macaly`  | Scopes explicitly selected Macaly work and keeps local work local. |
 | `commands/build-app`                | `/build-app <idea>` — a friction-free explicit entry point.        |
 
