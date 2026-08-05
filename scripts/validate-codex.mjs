@@ -148,8 +148,31 @@ function validateMarketplace() {
 // --- Plugin manifest validation (mirrors manifest.rs) ---
 
 const MAX_SKILL_NAME_LENGTH = 64;
+const MAX_FINAL_SHORT_DESCRIPTION_LENGTH = 30;
+const MAX_FINAL_URL_LENGTH = 1024;
 const MAX_DEFAULT_PROMPT_COUNT = 3;
 const MAX_DEFAULT_PROMPT_LENGTH = 128;
+const REQUIRED_MCP_INTERFACE_URLS = [
+  "websiteURL",
+  "supportURL",
+  "privacyPolicyURL",
+  "termsOfServiceURL",
+];
+const FINAL_DIRECTORY_CATEGORIES = new Set([
+  "Productivity",
+  "Creativity",
+  "Developer Tools",
+  "Business & Operations",
+  "Data & Analytics",
+  "Communication",
+  "Education & Research",
+  "Security",
+  "Finance",
+  "Healthcare",
+  "Travel",
+  "Entertainment",
+  "Other",
+]);
 
 function validatePluginManifest(pluginDir, marketplaceName) {
   const manifestPath = resolve(pluginDir, ".codex-plugin", "plugin.json");
@@ -180,6 +203,12 @@ function validatePluginManifest(pluginDir, marketplaceName) {
       );
       continue;
     }
+    if (field === "mcpServers" && value !== "./.mcp.json") {
+      fail(
+        `${label}: \`mcpServers\` must reference "./.mcp.json" — got "${value}"`
+      );
+      continue;
+    }
     const resolved = resolve(pluginDir, value.slice(2));
     if (!existsSync(resolved)) {
       fail(`${label}: \`${field}\` references missing path "${value}"`);
@@ -188,14 +217,60 @@ function validatePluginManifest(pluginDir, marketplaceName) {
 
   // Validate interface
   if (manifest.interface) {
-    validatePluginInterface(pluginDir, label, manifest.interface);
+    validatePluginInterface(
+      pluginDir,
+      label,
+      manifest.interface,
+      Boolean(manifest.mcpServers)
+    );
   }
 
   // Validate skills
   validateSkills(pluginDir, label, manifest.skills);
 }
 
-function validatePluginInterface(pluginDir, label, iface) {
+function validatePluginInterface(pluginDir, label, iface, hasMcpServers) {
+  if (
+    typeof iface.shortDescription !== "string" ||
+    iface.shortDescription.trim().length === 0
+  ) {
+    fail(`${label}: interface.shortDescription must be a non-empty string`);
+  } else if (iface.shortDescription.length > MAX_FINAL_SHORT_DESCRIPTION_LENGTH) {
+    fail(
+      `${label}: interface.shortDescription exceeds the ${MAX_FINAL_SHORT_DESCRIPTION_LENGTH}-character final directory limit`
+    );
+  }
+
+  if (!FINAL_DIRECTORY_CATEGORIES.has(iface.category)) {
+    fail(
+      `${label}: interface.category must be a supported final directory category`
+    );
+  }
+
+  if (hasMcpServers) {
+    for (const field of REQUIRED_MCP_INTERFACE_URLS) {
+      const value = iface[field];
+      if (typeof value !== "string" || value.length === 0) {
+        fail(`${label}: interface.${field} is required for MCP submissions`);
+        continue;
+      }
+      if (value.length > MAX_FINAL_URL_LENGTH) {
+        fail(
+          `${label}: interface.${field} exceeds the ${MAX_FINAL_URL_LENGTH}-character final directory limit`
+        );
+        continue;
+      }
+      try {
+        const url = new URL(value);
+        if (url.protocol !== "https:" || !url.hostname) {
+          fail(`${label}: interface.${field} must be a public HTTPS URL`);
+        }
+      } catch {
+        fail(`${label}: interface.${field} must be a valid HTTPS URL`);
+      }
+    }
+  }
+
   // Validate asset paths
   for (const field of ["composerIcon", "logo"]) {
     const value = iface[field];
