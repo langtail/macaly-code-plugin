@@ -1,7 +1,7 @@
 {
   "name": "macaly-code",
   "version": "0.3.0",
-  "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
+  "description": "Build and host real web apps on Macaly straight from your agent.",
   "author": {
     "name": "Macaly",
     "email": "support@macaly.com",
