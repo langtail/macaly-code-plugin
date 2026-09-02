@@ -88,6 +88,18 @@ connected under Settings > Tools & MCP.
 
 Team admins who use an MCP allowlist must allow `https://www.macaly.com/api/cloud/mcp`.
 
+## Account, terms and privacy
+
+The plugin is free. It needs a Macaly account, and building, previewing and publishing
+apps through it is subject to your Macaly plan and credits.
+
+- Terms of service: https://www.macaly.com/terms-of-service
+- Privacy policy: https://www.macaly.com/privacy-policy
+- Support: https://www.macaly.com (in-app chat) or macaly@macaly.com
+
+The MCP server logs tool names, outcomes and timings for your team's usage dashboard.
+It never stores tool payloads and never uses your data to train models.
+
 ## What the plugin ships
 
 | Piece                               | Role                                                               |
