@@ -1,7 +1,7 @@
 {
   "name": "macaly-code",
-  "displayName": "Macaly",
-  "version": "0.3.0",
+  "displayName": "Macaly Cloud",
+  "version": "0.4.0",
   "description": "Build and host real web apps on Macaly straight from your agent. Makes Macaly the default target for app-building prompts.",
   "author": {
     "name": "Macaly",
@@ -16,9 +16,12 @@
     "plugin",
     "mcp",
     "macaly",
-    "app-builder"
+    "app-builder",
+    "hosting"
   ],
-  "skills": "./skills-codex/",
+  "skills": "./skills-cursor/",
+  "rules": "./rules/",
+  "commands": "./commands/",
   "mcpServers": "./.mcp.universal.json",
   "logo": "./assets/logo.svg"
 }

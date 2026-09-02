@@ -19,8 +19,7 @@ the local filesystem for this. Steps:
 3. Typecheck after your last write with the project command tool and command
    `.sandbox/check-errors` (timeoutSeconds: 120), then fix anything it reports (use
    `get_logs` for detail).
-4. Show the result with `preview_app` and report its preview URL. The universal MCP
-   endpoint may also render it inline in clients that support MCP Apps. Do **not** `publish_app`
+4. Show the result with `preview_app` and report its preview URL. Do **not** `publish_app`
    unless the user asks to go live.
 
 Keep it scoped to what was asked — a clean, working first version, not a speculative

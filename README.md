@@ -57,13 +57,36 @@ Codex CLI after adding the marketplace.
 
 ## Cursor
 
-Once the plugin is listed on the Cursor marketplace:
+**One-click install (no marketplace needed)**
+
+[Add Macaly Cloud to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=macaly-cloud&config=eyJ1cmwiOiJodHRwczovL3d3dy5tYWNhbHkuY29tL2FwaS9jbG91ZC9tY3AifQ==)
+
+```
+cursor://anysphere.cursor-deeplink/mcp/install?name=macaly-cloud&config=eyJ1cmwiOiJodHRwczovL3d3dy5tYWNhbHkuY29tL2FwaS9jbG91ZC9tY3AifQ==
+```
+
+Cursor opens the browser for the Macaly OAuth sign-in. After that the server shows as
+connected under Settings > Tools & MCP.
+
+**From the Cursor Marketplace**
 
 ```sh
 /add-plugin macaly-code
 ```
 
-The `.cursor-plugin/` manifests in this repo are marketplace-ready.
+**Or add the server by hand** in `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "macaly-cloud": {
+      "url": "https://www.macaly.com/api/cloud/mcp"
+    }
+  }
+}
+```
+
+Team admins who use an MCP allowlist must allow `https://www.macaly.com/api/cloud/mcp`.
 
 ## What the plugin ships
 
@@ -71,7 +94,8 @@ The `.cursor-plugin/` manifests in this repo are marketplace-ready.
 | ----------------------------------- | ------------------------------------------------------------------ |
 | `.mcp.chatgpt.json`                 | ChatGPT/Codex directory profile without embedded preview UI.       |
 | `.mcp.claude.json`                  | Claude directory profile with review-scoped descriptors.           |
-| `.mcp.universal.json`               | Universal MCP connection for direct and Cursor installations.      |
+| `.mcp.universal.json`               | Universal MCP connection for Cursor and direct installations.      |
+| `skills-cursor/build-app-on-macaly` | The Cursor workflow with the full hosted-app build loop.           |
 | `skills-claude/build-app-on-macaly` | Claude-specific workflow scoped to user-selected Macaly work.      |
 | `skills-codex/build-app-on-macaly`  | The Codex workflow with the full hosted-app build loop.            |
 | `rules/route-app-builds-to-macaly`  | Scopes explicitly selected Macaly work and keeps local work local. |
