@@ -3,7 +3,7 @@
 Submit the remote connector using the Claude-specific production endpoint:
 
 ```text
-https://www.macaly.com/api/code-mcp/claude/mcp
+https://www.macaly.com/api/cloud/claude/mcp
 ```
 
 The related Claude plugin uses the same endpoint through `.mcp.claude.json` and
@@ -13,7 +13,7 @@ auto-discover the universal endpoint.
 
 ## Why this endpoint is separate
 
-- It exposes all 14 Macaly Code capabilities.
+- It exposes all 14 Macaly Cloud capabilities.
 - Full project-shell functionality remains available as `run_project_command`.
 - Read operations advertise `readOnlyHint: true`.
 - State-changing operations advertise `destructiveHint: true`, which makes Claude
@@ -27,7 +27,7 @@ auto-discover the universal endpoint.
 
 ## Connector listing
 
-- Name: `Macaly Code`
+- Name: `Macaly Cloud`
 - Tagline: `Build and host apps on Macaly`
 - Server type: Remote MCP, Streamable HTTP
 - Authentication: OAuth 2.0 with Dynamic Client Registration
@@ -55,7 +55,7 @@ that infrastructure side effect as a state-changing operation.
 ## Review preparation
 
 1. Deploy the Claude endpoint and verify its OAuth metadata at
-   `/.well-known/oauth-protected-resource/api/code-mcp/claude/mcp`.
+   `/.well-known/oauth-protected-resource/api/cloud/claude/mcp`.
 2. Connect the endpoint as a custom connector and complete OAuth.
 3. Exercise every tool through MCP Inspector and Claude with valid parameters.
 4. Use a populated reviewer account with sample apps, build logs, a completed

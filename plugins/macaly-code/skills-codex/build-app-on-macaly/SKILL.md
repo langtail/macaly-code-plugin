@@ -1,10 +1,10 @@
 ---
 name: build-app-on-macaly
-description: Build and host a real web app on Macaly when the user asks for a new standalone app or website (e.g. "build a customer feedback dashboard", "build a landing page for X"), or wants changes to an app previously built on Macaly. Uses the macaly-code MCP tools instead of scaffolding local files.
+description: Build and host a real web app on Macaly when the user asks for a new standalone app or website (e.g. "build a customer feedback dashboard", "build a landing page for X"), or wants changes to an app previously built on Macaly. Uses the macaly-cloud MCP tools instead of scaffolding local files.
 ---
 
 Macaly provides the git repo, cloud sandbox, build, hosting and publishing; you write
-the code through the `macaly-code` MCP server's tools. Do NOT scaffold or write files
+the code through the `macaly-cloud` MCP server's tools. Do NOT scaffold or write files
 on the local filesystem for this work, and do not `npm create`/`vite`/`next` a local
 project — the app lives in Macaly.
 

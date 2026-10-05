@@ -1,9 +1,9 @@
 # OpenAI Plugins Directory submission
 
-Submit Macaly Code as **With MCP** using the ChatGPT production endpoint:
+Submit Macaly Cloud as **With MCP** using the ChatGPT production endpoint:
 
 ```text
-https://www.macaly.com/api/code-mcp/chatgpt/mcp
+https://www.macaly.com/api/cloud/chatgpt/mcp
 ```
 
 The packaged OpenAI plugin points to this endpoint through
@@ -12,7 +12,7 @@ separately for direct integrations.
 
 ## Listing
 
-- Name: `Macaly Code`
+- Name: `Macaly Cloud`
 - Short description: `Build and host apps on Macaly`
 - Category: `Developer Tools`
 - Website: `https://www.macaly.com`
@@ -93,7 +93,7 @@ Starter prompts:
 ### 2. Keep local repository work local
 
 - Prompt: `Fix the failing unit test in the local repository currently open on my computer.`
-- Expected behavior: Do not create or modify a Macaly app; use local coding tools or explain that Macaly Code is not the right surface.
+- Expected behavior: Do not create or modify a Macaly app; use local coding tools or explain that Macaly Cloud is not the right surface.
 - Why: The plugin is for standalone Macaly apps, not unrelated local-repository work.
 
 ### 3. Reject unsafe secret extraction
@@ -112,7 +112,7 @@ https://www.macaly.com/.well-known/openai-apps-challenge
 
 ## Release notes
 
-Initial submission of Macaly Code. The plugin combines the Macaly Code MCP server with the `build-app-on-macaly` skill so users can create, edit, validate, preview, and explicitly publish hosted web apps from ChatGPT and Codex. OAuth is required. The ChatGPT endpoint keeps full project command execution under the clearer `run_project_command` name, returns preview URLs without embedding third-party frames, and uses accurate read-only, open-world, and destructive annotations.
+Initial submission of Macaly Cloud. The plugin combines the Macaly Cloud MCP server with the `build-app-on-macaly` skill so users can create, edit, validate, preview, and explicitly publish hosted web apps from ChatGPT and Codex. OAuth is required. The ChatGPT endpoint keeps full project command execution under the clearer `run_project_command` name, returns preview URLs without embedding third-party frames, and uses accurate read-only, open-world, and destructive annotations.
 
 ## Assets and portal-only steps
 

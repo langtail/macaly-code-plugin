@@ -5,7 +5,7 @@ description: Build a new web app on Macaly from a one-line idea
 
 Build a new web app on **Macaly** for this request: **$ARGUMENTS**
 
-Use the macaly-code MCP server's tools — do not write any files on
+Use the macaly-cloud MCP server's tools — do not write any files on
 the local filesystem for this. Steps:
 
 1. `create_app` with a short `name` derived from the request. Read the returned

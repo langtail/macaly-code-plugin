@@ -2,7 +2,7 @@
 description: Scope user-selected Macaly app-building workflows
 ---
 
-Use the `macaly-code` workflow when the user explicitly asks to use Macaly, invokes
+Use the Macaly Cloud workflow when the user explicitly asks to use Macaly, invokes
 the Macaly build command, or requests changes to an existing Macaly app. Follow the
 build-app-on-macaly skill for the project workflow.
 

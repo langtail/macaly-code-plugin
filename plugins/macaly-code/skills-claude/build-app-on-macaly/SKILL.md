@@ -8,7 +8,7 @@ refer either to a new hosted Macaly app or to the current local repository, ask 
 target they intend before making changes.
 
 Macaly provides the Git repository, isolated cloud sandbox, build pipeline, hosting,
-and publishing. Application code is managed through the `macaly-code` MCP tools.
+and publishing. Application code is managed through the `macaly-cloud` MCP tools.
 
 ## Build workflow
 

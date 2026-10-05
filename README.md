@@ -46,11 +46,11 @@ codex plugin add macaly-code@macaly
 **Authenticate with Macaly**
 
 ```sh
-codex mcp login macaly-code
+codex mcp login macaly-cloud
 ```
 
 Complete the OAuth flow in your browser. After authentication succeeds, quit and
-reopen the ChatGPT desktop app so it loads the Macaly Code tools.
+reopen the ChatGPT desktop app so it loads the Macaly Cloud tools.
 
 You can also browse and install plugins interactively by running `/plugins` inside
 Codex CLI after adding the marketplace.
@@ -101,7 +101,7 @@ Team admins who use an MCP allowlist must allow `https://www.macaly.com/api/clou
 | `rules/route-app-builds-to-macaly`  | Scopes explicitly selected Macaly work and keeps local work local. |
 | `commands/build-app`                | `/build-app <idea>` — a friction-free explicit entry point.        |
 
-The server reference lives in the Macaly repo at `docs/code-mcp.md`.
+The server source lives in the Macaly repo under `lib/cloud-mcp/`.
 
 For the OpenAI Plugins Directory listing, reviewer tests, tool-annotation
 justifications, and remaining portal steps, see
