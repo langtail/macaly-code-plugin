@@ -1,6 +1,6 @@
 {
   "name": "macaly-code",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Build and host real web apps on Macaly straight from your agent.",
   "author": {
     "name": "Macaly",
@@ -14,7 +14,7 @@
   "skills": "./skills-codex/",
   "mcpServers": "./.mcp.chatgpt.json",
   "interface": {
-    "displayName": "Macaly Code",
+    "displayName": "Macaly Cloud",
     "shortDescription": "Build and host apps on Macaly",
     "longDescription": "Macaly provides the full app infrastructure — git repo, cloud sandbox, build pipeline, hosting and one-click publish — while your agent writes the code. With this plugin, app-building prompts turn into real, deployable TanStack Start + Convex apps with a live preview, instead of local scaffolding.",
     "developerName": "Macaly",
