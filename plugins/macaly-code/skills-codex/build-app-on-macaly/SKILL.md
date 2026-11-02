@@ -24,8 +24,8 @@ project — the app lives in Macaly.
    `get_logs` (build | dev_server | deploy) has the real output.
 4. Need a database, auth, payments, media, or search? `skill_info({ chatId, skill })`
    to read the guide, then **execute its commands with the available project command
-   tool** (`run_project_command` or `bash`). It runs inside the project sandbox, which
-   has `$MACALY_API_TOKEN`/`$MACALY_BASE_URL`/`$MACALY_CHAT_ID` set and the skill
+   tool** (`run_project_command` or `bash`). It runs inside the project's isolated
+   cloud sandbox, which already has the Macaly project environment and the skill
    scripts under `.macaly/skills/`, so the guide's commands run verbatim (e.g. the
    setup-convex-db script provisions Convex end-to-end).
 5. Env vars live in the app's root `.env.local` — setup skills write it via the
