@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "macaly-code",
+      "name": "macaly-cloud",
       "source": "./plugins/macaly-code",
       "description": "Build, validate, preview, and host web apps in a managed Macaly project."
     }

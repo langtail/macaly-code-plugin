@@ -1,5 +1,5 @@
 {
-  "name": "macaly-code",
+  "name": "macaly-cloud",
   "version": "0.4.0",
   "description": "Build, validate, preview, and host web apps in a managed Macaly project.",
   "author": {
@@ -7,6 +7,7 @@
     "url": "https://www.macaly.com"
   },
   "homepage": "https://www.macaly.com",
+  "privacyPolicyUrl": "https://www.macaly.com/privacy-policy",
   "repository": "https://github.com/langtail/macaly-code-plugin",
   "license": "MIT",
   "keywords": ["macaly", "app-builder", "hosting", "tanstack", "convex", "mcp"],

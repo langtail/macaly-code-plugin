@@ -1,20 +1,20 @@
 # Macaly agent plugins
 
 Build and host real web apps on [Macaly](https://www.macaly.com) with your favorite
-agent harness. With the **macaly-code** plugin installed, "build a customer feedback dashboard"
+agent harness. With the **Macaly Cloud** plugin installed, "build a customer feedback dashboard"
 becomes a real, deployable app with a live preview — instead of local scaffolding.
 
 ## Claude Code
 
 **One-click install**
 
-[Install macaly-code in Claude](https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-code)
+[Install Macaly Cloud in Claude](https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-cloud)
 
 ```
-https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-code
+https://claude.ai/desktop/customize/plugins/new?marketplace=langtail/macaly-code-plugin&plugin=macaly-cloud
 ```
 
-This opens the Claude desktop app straight on the macaly-code install dialog, with the
+This opens the Claude desktop app straight on the macaly-cloud install dialog, with the
 marketplace already filled in.
 
 **Or add the custom marketplace by hand**
@@ -26,7 +26,7 @@ marketplace already filled in.
 **Install the plugin**
 
 ```sh
-/plugin install macaly-code@macaly
+/plugin install macaly-cloud@macaly
 ```
 
 ## Codex
