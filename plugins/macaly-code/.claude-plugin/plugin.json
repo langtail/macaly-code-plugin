@@ -8,7 +8,7 @@
   },
   "homepage": "https://www.macaly.com",
   "documentationUrl": "https://www.macaly.com/docs/en/welcome/overview",
-  "supportUrl": "mailto:support@macaly.com",
+  "supportUrl": "https://www.macaly.com/docs/en/welcome/faq#support",
   "privacyPolicyUrl": "https://www.macaly.com/privacy-policy",
   "termsOfServiceUrl": "https://www.macaly.com/terms-of-service",
   "repository": "https://github.com/langtail/macaly-code-plugin",
