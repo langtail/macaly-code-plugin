@@ -56,6 +56,26 @@ auto-discover the universal endpoint.
 logs. It does not change project files, but the Claude profile conservatively treats
 that infrastructure side effect as a state-changing operation.
 
+## Directory file rules
+
+The directory accepts scripts, programs, and other file types only from Verified
+organizations. Until the Macaly organization is Verified, keep every file in this
+repository inside these rules:
+
+- Use only Markdown, text, JSON, and YAML files, and PNG, JPEG, GIF, WebP, or ICO
+  images.
+- Do not add a file that starts with `#!`.
+- Do not add a package manager configuration file, such as package.json or
+  pnpm-workspace.yaml.
+- Save each text file as UTF-8 with no NUL bytes.
+
+The license, the readme files, .gitignore, and the plugin icon can stay. The plugin
+icon is the PNG logo that the `icon` field of the Claude manifest names. The Codex and
+Cursor manifests use the same file.
+
+The Cursor and Codex validators and the CI workflow that ran them broke these rules,
+so the repository does not hold them. Commit `449edd5` has the last copy.
+
 ## Review preparation
 
 1. Deploy the Claude endpoint and verify its OAuth metadata at
