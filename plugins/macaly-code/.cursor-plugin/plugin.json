@@ -23,5 +23,5 @@
   "rules": "./rules/",
   "commands": "./commands/",
   "mcpServers": "./.mcp.universal.json",
-  "logo": "./assets/logo.svg"
+  "logo": "./assets/logo.png"
 }
